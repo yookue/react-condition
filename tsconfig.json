@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "declaration": true,
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
+        "moduleResolution": "node",
+        "target": "es6",
+        "lib": ["dom", "es2017"],
+        "skipLibCheck": true,
+        "strict": true,
+        "paths": {
+            "@": [
+                "./src"
+            ],
+            "@/*": [
+                "./src/*"
+            ],
+            "@yookue/react-condition": [
+                "./src"
+            ],
+            "@yookue/react-condition/*": [
+                "./src/*",
+                "*"
+            ]
+        },
+    },
+    "include": [
+        "src/**/*",
+        "test/**/*",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "docs-dist",
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "name": "@yookue/react-condition",
+    "version": "0.1.0",
+    "title": "ReactCondition",
+    "description": "Render components conditionally for React",
+    "homepage": "https://github.com/yookue/react-condition",
+    "organization": "Yookue Ltd",
+    "private": false,
+    "license": "MIT",
+    "keywords": [
+        "if",
+        "if-else",
+        "condition",
+        "react-condition"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "unpkg": "dist/umd/react-condition.min.js",
+    "types": "dist/esm/index.d.ts",
+    "sideEffects": false,
+    "scripts": {
+        "build": "father build",
+        "build:watch": "father dev",
+        "rebuild": "del-cli ./dist && father build",
+        "doctor": "father doctor",
+        "lint": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+        "test": "jest",
+        "test:coverage": "jest --coverage"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.22.10"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.1.2",
+        "@testing-library/react": "^12.1.5",
+        "@types/jest": "^29.5.4",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "babel-plugin-comments": "^1.0.4",
+        "del-cli": "^5.0.0",
+        "eslint": "^7.32.0",
+        "father": "^4.3.1",
+        "jest-environment-jsdom": "^29.6.4",
+        "prettier": "^2.8.8",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
+        "ts-jest": "^29.1.1",
+        "typescript": "^4.9.5"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0",
+        "react-dom": ">=16.9.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yookue/react-condition.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yookue/react-condition/issues"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "author": {
+        "name": "Yookue Ltd",
+        "email": "yookue@outlook.com",
+        "url": "https://yookue.com"
+    },
+    "contributors": [
+        {
+            "name": "Davis Hsing",
+            "email": "davidhsing@163.com",
+            "url": "https://github.com/davidhsing"
+        }
+    ]
+}

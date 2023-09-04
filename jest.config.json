@@ -1,0 +1,11 @@
+{
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": ["<rootDir>/test/jest.setup.ts"],
+    "testEnvironment": "jsdom",
+    "verbose": false,
+    "moduleNameMapper": {
+        "^@$": "<rootDir>/src",
+        "^@/(.*)$": "<rootDir>/src/$1",
+        "^@yookue/react-condition$": "<rootDir>/src"
+    }
+}
