@@ -1,6 +1,6 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "title": "ReactCondition",
     "description": "Render components conditionally for React",
     "homepage": "https://github.com/yookue/react-condition",
@@ -10,6 +10,7 @@
     "keywords": [
         "if",
         "if-else",
+        "switch",
         "condition",
         "react-condition"
     ],

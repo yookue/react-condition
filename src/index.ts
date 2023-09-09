@@ -15,6 +15,6 @@
  */
 
 
-export {For, type ForProps} from './utils/For';
-export {If, type IfProps, type ThenElseProps} from './utils/If';
-export {Switch, type SwitchCaseProps, type SwitchDefaultProps} from './utils/Switch';
+export {For, type ForProps} from './util/For';
+export {If, type IfProps, type ThenElseProps} from './util/If';
+export {Switch, type SwitchCaseProps, type SwitchDefaultProps} from './util/Switch';

@@ -16,7 +16,7 @@
 
 
 import {Switch} from '@yookue/react-condition';
-import {render, screen, waitFor} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 
 
 describe('react-condition Switch', () => {
