@@ -44,7 +44,7 @@
         "babel-plugin-comments": "^1.0.4",
         "del-cli": "^5.1.0",
         "eslint": "^7.32.0",
-        "father": "^4.3.3",
+        "father": "^4.3.4",
         "jest-environment-jsdom": "^29.6.4",
         "prettier": "^2.8.8",
         "react": "^17.0.0",
