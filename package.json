@@ -1,6 +1,6 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "title": "ReactCondition",
     "description": "Render components conditionally for React",
     "homepage": "https://github.com/yookue/react-condition",
@@ -66,18 +66,6 @@
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
     },
     "author": {
         "name": "Yookue Ltd",
