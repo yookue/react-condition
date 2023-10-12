@@ -23,6 +23,6 @@ export type ForProps = {
     render?: (item: any, index: number) => React.ReactNode;
 }
 
-export const For : any = (props?: React.PropsWithChildren<ForProps>) => {
+export const For: any = (props?: React.PropsWithChildren<ForProps>) => {
     return props?.of?.map((item, index) => props?.render ? props?.render(item, index) : props?.children);
 }

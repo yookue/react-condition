@@ -26,7 +26,7 @@ export type ThenElseProps = {
     render?: () => React.ReactNode;
 }
 
-export const If : any = (props?: React.PropsWithChildren<IfProps>) => {
+export const If: any = (props?: React.PropsWithChildren<IfProps>) => {
     // return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
     if (!props?.children) {
         return null;
