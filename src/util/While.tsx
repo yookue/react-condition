@@ -15,8 +15,19 @@
  */
 
 
-export {Do, type DoProps} from './util/Do';
-export {For, type ForProps} from './util/For';
-export {If, type IfProps, type IfThenProps, type IfElseProps} from './util/If';
-export {Switch, type SwitchCaseProps, type SwitchDefaultProps} from './util/Switch';
-export {While, type WhileProps} from './util/While';
+import React from 'react';
+
+
+export type WhileProps = {
+    condition: () => boolean | number | string | null | undefined;
+    render: (index: number) => React.ReactNode;
+}
+
+export const While: any = (props: WhileProps) => {
+    const result: React.ReactNode[] = [];
+    let index = 0;
+    while (props?.condition()) {
+        result.push(props?.render(index++));
+    }
+    return result;
+}

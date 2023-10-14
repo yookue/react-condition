@@ -20,9 +20,9 @@ import React from 'react';
 
 export type ForProps = {
     of: Array<any>;
-    render?: (item: any, index: number) => React.ReactNode;
+    render: (item: any, index: number) => React.ReactNode;
 }
 
-export const For: any = (props?: React.PropsWithChildren<ForProps>) => {
-    return props?.of?.map((item, index) => props?.render ? props?.render(item, index) : props?.children);
+export const For: any = (props: ForProps) => {
+    return props?.of?.map((item, index) => props?.render(item, index));
 }

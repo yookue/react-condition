@@ -22,11 +22,13 @@ export type IfProps = {
     condition: boolean | number | string | null | undefined;
 }
 
-export type ThenElseProps = {
+export type IfThenProps = {
     render?: () => React.ReactNode;
 }
 
-export const If: any = (props?: React.PropsWithChildren<IfProps>) => {
+export type IfElseProps = IfThenProps
+
+export const If: any = (props: React.PropsWithChildren<IfProps>) => {
     // return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
     if (!props?.children) {
         return null;
@@ -42,19 +44,19 @@ export const If: any = (props?: React.PropsWithChildren<IfProps>) => {
         }
     });
     if (thenCount > 1 || elseCount > 1) {
-        throw SyntaxError(`Each statement of 'If.Then/If.Else' for [If condition='${props.condition}'] must be a single one at most!`);
+        throw SyntaxError(`Each statement of 'If.Then/If.Else' for [If condition='${props.condition}'] must be a single one!`);
     }
 
     return React.Children.map(props.children, (child: React.ReactNode) => {
-        const underElse = (child as React.ReactElement).type === If.Else;
-        return ((props.condition && !underElse) || (!props.condition && underElse)) ? child : null;
+        const isElse = (child as React.ReactElement).type === If.Else;
+        return ((props.condition && !isElse) || (!props.condition && isElse)) ? child : null;
     });
 }
 
-If.Then = (props?: React.PropsWithChildren<ThenElseProps>) : React.ReactNode => {
+If.Then = (props?: React.PropsWithChildren<IfThenProps>): React.ReactNode => {
     return props?.render ? props?.render() : props?.children;
 }
 
-If.Else = (props?: React.PropsWithChildren<ThenElseProps>) : React.ReactNode => {
+If.Else = (props?: React.PropsWithChildren<IfElseProps>): React.ReactNode => {
     return props?.render ? props?.render() : props?.children;
 }

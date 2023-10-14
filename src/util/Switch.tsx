@@ -27,7 +27,7 @@ export type SwitchDefaultProps = {
     render?: () => React.ReactNode;
 }
 
-export const Switch: any = (props?: React.PropsWithChildren<any>) => {
+export const Switch: any = (props: React.PropsWithChildren<any>) => {
     let caseCount = 0, defaultCount = 0;
     React.Children.forEach(props.children, (child: React.ReactNode) => {
         const childType = (child as React.ReactElement).type;
@@ -58,10 +58,10 @@ export const Switch: any = (props?: React.PropsWithChildren<any>) => {
     return caseValue || defaultValue;
 }
 
-Switch.Case = (props?: React.PropsWithChildren<SwitchCaseProps>) : React.ReactNode => {
+Switch.Case = (props: React.PropsWithChildren<SwitchCaseProps>): React.ReactNode => {
     return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
 };
 
-Switch.Default = (props?: React.PropsWithChildren<SwitchDefaultProps>) : React.ReactNode => {
+Switch.Default = (props?: React.PropsWithChildren<SwitchDefaultProps>): React.ReactNode => {
     return props?.render ? props?.render() : props?.children;
 };

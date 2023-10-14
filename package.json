@@ -1,6 +1,6 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "title": "ReactCondition",
     "description": "Render components conditionally for React",
     "homepage": "https://github.com/yookue/react-condition",
@@ -8,11 +8,16 @@
     "private": false,
     "license": "MIT",
     "keywords": [
+        "react-condition",
         "if",
         "if-else",
+        "for",
         "switch",
+        "do-while",
+        "while-do",
         "condition",
-        "react-condition"
+        "condition-render",
+        "control-statement"
     ],
     "files": [
         "dist"
@@ -34,7 +39,7 @@
         "@babel/runtime": "^7.23.1"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^6.1.2",
+        "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^12.1.5",
         "@types/jest": "^29.5.5",
         "@types/react": "^17.0.0",
@@ -67,7 +72,7 @@
         "access": "public",
         "registry": "https://registry.npmjs.org/"
     },
-    "collective" : {
+    "collective": {
         "url": "https://opencollective.com/yookue-awesome"
     },
     "funding": [
