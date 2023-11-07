@@ -20,6 +20,23 @@ import {render, screen} from '@testing-library/react';
 
 
 describe('react-condition If', () => {
+    test('Testing object', () => {
+        const param: Object = {foo: 'bar'};
+        render(
+            <If condition={param}>
+                <If.Then>
+                    <span data-testid='jest'>Good luck</span>
+                </If.Then>
+                <If.Else>
+                    <span data-testid='oops'>Bad luck</span>
+                </If.Else>
+            </If>
+        );
+        // screen.debug();
+        expect(screen.queryByTestId('jest')).toBeInTheDocument();
+        expect(screen.queryByTestId('oops')).not.toBeInTheDocument();
+    });
+
     test('Testing none then', () => {
         const param: boolean = true;
         render(
