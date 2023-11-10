@@ -18,7 +18,7 @@
 
 ## Quickstart
 
-You can install react-condition package in your existing React project as follows:
+You can install react-condition package in your existing react project as follows:
 
 ```bash
 $ npm install @yookue/react-condition --save
@@ -208,4 +208,4 @@ This project is under the [MIT](https://mit-license.org/) License (MIT)
 
 ## Website
 
-- Yookue: https://yookue.com
+- Yookue: [https://yookue.com](https://yookue.com)
