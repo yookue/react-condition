@@ -19,7 +19,19 @@ import React from 'react';
 
 
 export type SwitchCaseProps = {
+    /**
+     * The condition to be checked
+     */
     condition: boolean | number | string | null | undefined;
+
+    /**
+     * Whether to validate the children for `Switch.Case/Switch.Default` nodes
+     */
+    validation?: boolean;
+
+    /**
+     * The render function to be executed
+     */
     render?: () => React.ReactNode;
 }
 
@@ -27,22 +39,25 @@ export type SwitchDefaultProps = {
     render?: () => React.ReactNode;
 }
 
+
 export const Switch: any = (props: React.PropsWithChildren<any>) => {
-    let caseCount = 0, defaultCount = 0;
-    React.Children.forEach(props.children, (child: React.ReactNode) => {
-        const childType = (child as React.ReactElement).type;
-        if (childType === Switch.Case) {
-            caseCount++;
+    if (typeof props?.validation === 'undefined' || props?.validation) {
+        let caseCount = 0, defaultCount = 0;
+        React.Children.forEach(props.children, (child: React.ReactNode) => {
+            const childType = (child as React.ReactElement).type;
+            if (childType === Switch.Case) {
+                caseCount++;
+            }
+            if (childType === Switch.Default) {
+                defaultCount++;
+            }
+        });
+        if (caseCount === 0 && defaultCount === 0) {
+            throw SyntaxError(`[Switch] must has any statements of 'Switch.Case/Switch.Default' at least!`);
         }
-        if (childType === Switch.Default) {
-            defaultCount++;
+        if (defaultCount > 1) {
+            throw SyntaxError(`Statement of 'Switch.Default' for [Switch] must be a single one at most!`);
         }
-    });
-    if (caseCount === 0 && defaultCount === 0) {
-        throw SyntaxError(`[Switch] must has any statements of 'Switch.Case/Switch.Default' at least!`);
-    }
-    if (defaultCount > 1) {
-        throw SyntaxError(`Statement of 'Switch.Default' for [Switch] must be a single one at most!`);
     }
 
     let caseValue: React.ReactNode = null, defaultValue: React.ReactNode = null;
@@ -57,6 +72,7 @@ export const Switch: any = (props: React.PropsWithChildren<any>) => {
     });
     return caseValue || defaultValue;
 }
+
 
 Switch.Case = (props: React.PropsWithChildren<SwitchCaseProps>): React.ReactNode => {
     return props?.condition ? (props?.render ? props?.render() : props?.children) : null;

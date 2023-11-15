@@ -19,9 +19,17 @@ import React from 'react';
 
 
 export type WhileProps = {
+    /**
+     * The condition to be checked
+     */
     condition: () => boolean | number | string | null | undefined;
+
+    /**
+     * The render function to be executed
+     */
     render: (index: number) => React.ReactNode;
 }
+
 
 export const While: any = (props: WhileProps) => {
     const result: React.ReactNode[] = [];

@@ -19,9 +19,17 @@ import React from 'react';
 
 
 export type ForProps = {
-    of: Array<any>;
+    /**
+     * The elements to be inspected
+     */
+    of: any[];
+
+    /**
+     * The render function to be executed
+     */
     render: (item: any, index: number) => React.ReactNode;
 }
+
 
 export const For: any = (props: ForProps) => {
     return props?.of?.map((item, index) => props?.render(item, index));

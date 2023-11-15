@@ -19,7 +19,15 @@ import React from 'react';
 
 
 export type IfProps = {
+    /**
+     * The condition to be checked
+     */
     condition: boolean | number | string | null | undefined;
+
+    /**
+     * Whether to validate the children for `If.Then/If.Else` nodes
+     */
+    validation?: boolean;
 }
 
 export type IfThenProps = {
@@ -28,23 +36,26 @@ export type IfThenProps = {
 
 export type IfElseProps = IfThenProps
 
+
 export const If: any = (props: React.PropsWithChildren<IfProps>) => {
     // return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
     if (!props?.children) {
         return null;
     }
-    let thenCount = 0, elseCount = 0;
-    React.Children.forEach(props.children, (child: React.ReactNode) => {
-        const childType = (child as React.ReactElement).type;
-        if (childType === If.Then) {
-            thenCount++;
+    if (typeof props?.validation === 'undefined' || props?.validation) {
+        let thenCount = 0, elseCount = 0;
+        React.Children.forEach(props.children, (child: React.ReactNode) => {
+            const childType = (child as React.ReactElement).type;
+            if (childType === If.Then) {
+                thenCount++;
+            }
+            if (childType === If.Else) {
+                elseCount++;
+            }
+        });
+        if (thenCount > 1 || elseCount > 1) {
+            throw SyntaxError(`Each statement of 'If.Then/If.Else' for [If condition='${props.condition}'] must be a single one!`);
         }
-        if (childType === If.Else) {
-            elseCount++;
-        }
-    });
-    if (thenCount > 1 || elseCount > 1) {
-        throw SyntaxError(`Each statement of 'If.Then/If.Else' for [If condition='${props.condition}'] must be a single one!`);
     }
 
     return React.Children.map(props.children, (child: React.ReactNode) => {
@@ -52,6 +63,7 @@ export const If: any = (props: React.PropsWithChildren<IfProps>) => {
         return ((props.condition && !isElse) || (!props.condition && isElse)) ? child : null;
     });
 }
+
 
 If.Then = (props?: React.PropsWithChildren<IfThenProps>): React.ReactNode => {
     return props?.render ? props?.render() : props?.children;

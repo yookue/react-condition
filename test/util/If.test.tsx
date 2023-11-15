@@ -23,7 +23,7 @@ describe('react-condition If', () => {
     test('Testing object', () => {
         const param: Object = {foo: 'bar'};
         render(
-            <If condition={param}>
+            <If condition={param} validation={false}>
                 <If.Then>
                     <span data-testid='jest'>Good luck</span>
                 </If.Then>
