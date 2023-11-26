@@ -36,12 +36,12 @@
         "test:coverage": "del-cli ./coverage && jest --coverage"
     },
     "dependencies": {
-        "@babel/runtime": "^7.23.2"
+        "@babel/runtime": "^7.23.4"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^12.1.5",
-        "@types/jest": "^29.5.6",
+        "@types/jest": "^29.5.10",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "@typescript-eslint/eslint-plugin": "^5.62.0",
