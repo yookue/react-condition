@@ -15,10 +15,25 @@
  */
 
 
-export {Do, type DoProps} from './util/Do';
-export {For, type ForProps} from './util/For';
-export {If, type IfProps, type IfThenProps, type IfElseProps} from './util/If';
-export {MapIterator, type MapIteratorProps} from './util/MapIterator';
-export {SetIterator, type SetIteratorProps} from './util/SetIterator';
-export {Switch, type SwitchCaseProps, type SwitchDefaultProps} from './util/Switch';
-export {While, type WhileProps} from './util/While';
+import React from 'react';
+
+
+export type MapIteratorProps = {
+    /**
+     * The elements to be inspected
+     */
+    of: Map<any, any> | ReadonlyMap<any, any>;
+
+    /**
+     * The render function to be executed
+     */
+    render: (value: any, key: any, index: number) => React.ReactNode;
+}
+
+
+export const MapIterator: any = (props: MapIteratorProps) => {
+    if (!props?.of || props.of.size === 0) {
+        return undefined;
+    }
+    return Array.from(props.of).map((item, index) => props?.render(item[1], item[0], index));
+}

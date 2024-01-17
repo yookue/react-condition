@@ -15,6 +15,8 @@
 🔁 Supports 'For' conditions.
 🔁 Supports 'Do' conditions.
 🔁 Supports 'While' conditions.
+🔁 Supports 'MapIterator' conditions.
+🔁 Supports 'SetIterator' conditions.
 
 ## Quickstart
 
@@ -27,7 +29,7 @@ $ npm install @yookue/react-condition --save
 Then, you may import components of react-condition as follows:
 
 ```jsx | pure
-import {If, For, Switch, Do, While} from '@yookue/react-condition';
+import {If, For, Switch, Do, While, MapIterator, SetIterator} from '@yookue/react-condition';
 ```
 
 Enjoy your journey in coding your projects with react-condition. ✌️
@@ -41,11 +43,11 @@ Enjoy your journey in coding your projects with react-condition. ✌️
 #### The `If` statement
 
 ```jsx | pure
+import React from 'react';
 import {If} from '@yookue/react-condition';
 
 export default () => {
     const param = true;
-
     return (
         <If condition={param}>
             <span>Hello World</span>
@@ -57,11 +59,11 @@ export default () => {
 #### The `If`-`Then` statement
 
 ```jsx | pure
+import React from 'react';
 import {If} from '@yookue/react-condition';
 
 export default () => {
     const param = 1;
-
     return (
         <If condition={param}>
             <If.Then>
@@ -75,11 +77,11 @@ export default () => {
 #### The `If`-`Else` statement
 
 ```jsx | pure
+import React from 'react';
 import {If} from '@yookue/react-condition';
 
 export default () => {
     const param = false;
-
     return (
         <If condition={param}>
             <span>Hello World</span>
@@ -94,11 +96,11 @@ export default () => {
 #### The `If`-`Then`-`Else` statement
 
 ```jsx | pure
+import React from 'react';
 import {If} from '@yookue/react-condition';
 
 export default () => {
     const param = false;
-
     return (
         <If condition={param}>
             <If.Then>
@@ -115,6 +117,7 @@ export default () => {
 ### For
 
 ```jsx | pure
+import React from 'react';
 import {For} from '@yookue/react-condition';
 
 export default () => {
@@ -136,6 +139,7 @@ export default () => {
 > Both of the `Switch.Case` and `Switch.Default` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `Children`.
 
 ```jsx | pure
+import React from 'react';
 import {Switch} from '@yookue/react-condition';
 
 export default () => {
@@ -160,6 +164,7 @@ export default () => {
 ### Do
 
 ```jsx | pure
+import React from 'react';
 import {Do} from '@yookue/react-condition';
 
 export default () => {
@@ -183,6 +188,7 @@ export default () => {
 ### While
 
 ```jsx | pure
+import React from 'react';
 import {While} from '@yookue/react-condition';
 
 export default () => {
@@ -195,6 +201,54 @@ export default () => {
             render={(index) => {
                 return (
                     <span key={index}>Hello, {index}</span>
+                );
+            }}
+        />
+    );
+}
+```
+
+### MapIterator
+
+```jsx | pure
+import React from 'react';
+import {MapIterator} from '@yookue/react-condition';
+
+export default () => {
+    const map = new Map([
+        ['foo', 'bar'],
+        ['hello', 'world'],
+    ]);
+    return (
+        <MapIterator
+            of={map}
+            render={(value, key, index) => {
+                return (
+                    <span key={index}>Hooray, {key}-{value}</span>
+                );
+            }}
+        />
+    );
+}
+```
+
+### SetIterator
+
+```jsx | pure
+import React from 'react';
+import {SetIterator} from '@yookue/react-condition';
+
+export default () => {
+    const set = new Set<string>([
+        'foo-bar',
+        'hello-world',
+    ]);
+    return (
+        <SetIterator
+            of={set}
+            render={(item, index) => {
+                return (
+                    <span key={index}>Hooray, {item}</span>
                 );
             }}
         />

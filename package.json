@@ -1,6 +1,6 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "title": "ReactCondition",
     "description": "Render components conditionally for React",
     "homepage": "https://github.com/yookue/react-condition",
@@ -13,8 +13,11 @@
         "if-else",
         "for",
         "switch",
+        "while",
         "do-while",
         "while-do",
+        "map-iterator",
+        "set-iterator",
         "condition",
         "condition-render",
         "control-statement"
