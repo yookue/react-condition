@@ -40,6 +40,11 @@ export type SwitchDefaultProps = {
 }
 
 
+/**
+ * Control statement for react `Switch`
+ *
+ * @author David Hsing
+ */
 export const Switch: any = (props: React.PropsWithChildren<any>) => {
     if (typeof props?.validation === 'undefined' || props?.validation) {
         let caseCount = 0, defaultCount = 0;

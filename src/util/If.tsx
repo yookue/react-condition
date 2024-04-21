@@ -37,6 +37,11 @@ export type IfThenProps = {
 export type IfElseProps = IfThenProps
 
 
+/**
+ * Control statement for react `If`
+ *
+ * @author David Hsing
+ */
 export const If: any = (props: React.PropsWithChildren<IfProps>) => {
     // return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
     if (!props?.children) {

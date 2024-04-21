@@ -31,6 +31,11 @@ export type MapIteratorProps = {
 }
 
 
+/**
+ * Control statement for react `MapIterator`
+ *
+ * @author David Hsing
+ */
 export const MapIterator: any = (props: MapIteratorProps) => {
     if (!props?.of || props.of.size === 0) {
         return undefined;

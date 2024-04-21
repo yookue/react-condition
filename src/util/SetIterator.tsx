@@ -31,6 +31,11 @@ export type SetIteratorProps = {
 }
 
 
+/**
+ * Control statement for react `SetIterator`
+ *
+ * @author David Hsing
+ */
 export const SetIterator: any = (props: SetIteratorProps) => {
     if (!props?.of || props.of.size === 0) {
         return undefined;

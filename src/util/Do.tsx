@@ -31,6 +31,11 @@ export type DoProps = {
 }
 
 
+/**
+ * Control statement for react `Do`
+ *
+ * @author David Hsing
+ */
 export const Do: any = (props: DoProps) => {
     const result: React.ReactNode[] = [];
     let index = 0;

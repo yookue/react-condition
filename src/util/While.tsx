@@ -31,6 +31,11 @@ export type WhileProps = {
 }
 
 
+/**
+ * Control statement for react `While`
+ *
+ * @author David Hsing
+ */
 export const While: any = (props: WhileProps) => {
     const result: React.ReactNode[] = [];
     let index = 0;

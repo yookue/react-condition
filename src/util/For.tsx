@@ -31,6 +31,11 @@ export type ForProps = {
 }
 
 
+/**
+ * Control statement for react `For`
+ *
+ * @author David Hsing
+ */
 export const For: any = (props: ForProps) => {
     return props?.of?.map((item, index) => props?.render(item, index));
 }
