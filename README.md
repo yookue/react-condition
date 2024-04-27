@@ -8,15 +8,23 @@
 
 ## Features
 
-1️⃣ Supports 'If' conditions.
-2️⃣ Supports 'If'-'Then' conditions.
-3️⃣ Supports 'If'-'Else' conditions.
-4️⃣ Supports 'If'-'Then'-Else' conditions.
-🔁 Supports 'For' conditions.
-🔁 Supports 'Do' conditions.
-🔁 Supports 'While' conditions.
-🔁 Supports 'MapIterator' conditions.
-🔁 Supports 'SetIterator' conditions.
+1️⃣ Supports 'If' conditions
+
+2️⃣ Supports 'If'-'Then' conditions
+
+3️⃣ Supports 'If'-'Else' conditions
+
+4️⃣ Supports 'If'-'Then'-Else' conditions
+
+🔁 Supports 'For' conditions
+
+🔁 Supports 'Do' conditions
+
+🔁 Supports 'While' conditions
+
+🔁 Supports 'MapIterator' conditions
+
+🔁 Supports 'SetIterator' conditions
 
 ## Quickstart
 
