@@ -28,19 +28,19 @@
 
 ## Quickstart
 
-You can install react-condition package in your existing react project as follows:
+You can install this package in your React project as follows:
 
 ```bash
 $ npm install @yookue/react-condition --save
 ```
 
-Then, you may import components of react-condition as follows:
+Then, you may import components as follows:
 
 ```jsx | pure
 import {If, For, Switch, Do, While, MapIterator, SetIterator} from '@yookue/react-condition';
 ```
 
-Enjoy your journey in coding your projects with react-condition. ✌️
+Enjoy your coding journey with `react-condition`. ✌️
 
 ## Example
 
