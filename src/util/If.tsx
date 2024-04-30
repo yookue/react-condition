@@ -47,10 +47,9 @@ export type IfElseProps = IfThenProps;
  *
  * @author David Hsing
  */
-export const If: any = (props: IfProps): React.ReactNode => {
-    // return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
+export const If: any = (props: IfProps) => {
     if (!props.children) {
-        return undefined;
+        return null;
     }
     if (props.validation === undefined || props.validation) {
         let thenCount = 0, elseCount = 0;
@@ -74,11 +73,11 @@ export const If: any = (props: IfProps): React.ReactNode => {
 };
 
 
-If.Then = (props?: IfThenProps): React.ReactNode => {
+If.Then = (props?: IfThenProps) => {
     return props?.render ? props.render() : props?.children;
 };
 
 
-If.Else = (props?: IfElseProps): React.ReactNode => {
+If.Else = (props?: IfElseProps) => {
     return props?.render ? props.render() : props?.children;
 };

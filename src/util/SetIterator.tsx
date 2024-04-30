@@ -36,7 +36,7 @@ export type SetIteratorProps = React.PropsWithChildren<{
  *
  * @author David Hsing
  */
-export const SetIterator: any = (props: SetIteratorProps): React.ReactNode => {
+export const SetIterator: any = (props: SetIteratorProps) => {
     return Array.from(props.of).map((item, index) => {
         if (props.render) {
             return props.render(item, index);
@@ -47,5 +47,6 @@ export const SetIterator: any = (props: SetIteratorProps): React.ReactNode => {
                 </div>
             );
         }
+        return null;
     });
 };

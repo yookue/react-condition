@@ -36,8 +36,8 @@ export type WhileProps = React.PropsWithChildren<{
  *
  * @author David Hsing
  */
-export const While: any = (props: WhileProps): React.ReactNode[] => {
-    const result: React.ReactNode[] = [];
+export const While: any = (props: WhileProps) => {
+    const result = [];
     let index = 0;
     while (props.condition()) {
         if (props.render) {

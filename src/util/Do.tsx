@@ -36,8 +36,8 @@ export type DoProps = React.PropsWithChildren<{
  *
  * @author David Hsing
  */
-export const Do: any = (props: DoProps): React.ReactNode[] => {
-    const result: React.ReactNode[] = [];
+export const Do: any = (props: DoProps) => {
+    const result = [];
     let index = 0;
     do {
         if (props.render) {

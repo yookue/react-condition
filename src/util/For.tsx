@@ -36,7 +36,7 @@ export type ForProps = React.PropsWithChildren<{
  *
  * @author David Hsing
  */
-export const For: any = (props: ForProps): React.ReactNode => {
+export const For: any = (props: ForProps) => {
     return props.of.map((item, index) => {
         if (props.render) {
             return props.render(item, index);
@@ -47,5 +47,6 @@ export const For: any = (props: ForProps): React.ReactNode => {
                 </div>
             );
         }
+        return null;
     });
 };
