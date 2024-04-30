@@ -18,23 +18,28 @@
 import React from 'react';
 
 
-export type IfProps = {
+export type IfProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
      */
-    condition: boolean | number | string | null | undefined;
+    condition: boolean | number | string | undefined | null;
 
     /**
-     * Whether to validate the children for `If.Then/If.Else` nodes
+     * Whether to validate the children nodes
      */
     validation?: boolean;
-}
+}>;
 
-export type IfThenProps = {
+
+export type IfThenProps = IfProps & {
+    /**
+     * The render function to be executed
+     */
     render?: () => React.ReactNode;
-}
+};
 
-export type IfElseProps = IfThenProps
+
+export type IfElseProps = IfThenProps;
 
 
 /**
@@ -42,15 +47,15 @@ export type IfElseProps = IfThenProps
  *
  * @author David Hsing
  */
-export const If: any = (props: React.PropsWithChildren<IfProps>) => {
+export const If: any = (props: IfProps): React.ReactNode => {
     // return props?.condition ? (props?.render ? props?.render() : props?.children) : null;
-    if (!props?.children) {
-        return null;
+    if (!props.children) {
+        return undefined;
     }
-    if (typeof props?.validation === 'undefined' || props?.validation) {
+    if (props.validation === undefined || props.validation) {
         let thenCount = 0, elseCount = 0;
-        React.Children.forEach(props.children, (child: React.ReactNode) => {
-            const childType = (child as React.ReactElement).type;
+        React.Children.forEach(props.children, (item: any) => {
+            const childType = (item as React.ReactElement)?.type;
             if (childType === If.Then) {
                 thenCount++;
             }
@@ -62,18 +67,18 @@ export const If: any = (props: React.PropsWithChildren<IfProps>) => {
             throw SyntaxError(`Each statement of 'If.Then/If.Else' for [If condition='${props.condition}'] must be a single one!`);
         }
     }
-
-    return React.Children.map(props.children, (child: React.ReactNode) => {
-        const isElse = (child as React.ReactElement).type === If.Else;
-        return ((props.condition && !isElse) || (!props.condition && isElse)) ? child : null;
+    return React.Children.map(props.children, (item: any) => {
+        const isElse = (item as React.ReactElement)?.type === If.Else;
+        return ((props.condition && !isElse) || (!props.condition && isElse)) ? item : null;
     });
-}
+};
 
 
-If.Then = (props?: React.PropsWithChildren<IfThenProps>): React.ReactNode => {
-    return props?.render ? props?.render() : props?.children;
-}
+If.Then = (props?: IfThenProps): React.ReactNode => {
+    return props?.render ? props.render() : props?.children;
+};
 
-If.Else = (props?: React.PropsWithChildren<IfElseProps>): React.ReactNode => {
-    return props?.render ? props?.render() : props?.children;
-}
+
+If.Else = (props?: IfElseProps): React.ReactNode => {
+    return props?.render ? props.render() : props?.children;
+};

@@ -18,7 +18,7 @@
 import React from 'react';
 
 
-export type ForProps = {
+export type ForProps = React.PropsWithChildren<{
     /**
      * The elements to be inspected
      */
@@ -27,8 +27,8 @@ export type ForProps = {
     /**
      * The render function to be executed
      */
-    render: (item: any, index: number) => React.ReactNode;
-}
+    render?: (item: any, index: number) => React.ReactNode;
+}>;
 
 
 /**
@@ -36,6 +36,16 @@ export type ForProps = {
  *
  * @author David Hsing
  */
-export const For: any = (props: ForProps) => {
-    return props?.of?.map((item, index) => props?.render(item, index));
-}
+export const For: any = (props: ForProps): React.ReactNode => {
+    return props.of.map((item, index) => {
+        if (props.render) {
+            return props.render(item, index);
+        } else if (!props.render && props.children) {
+            return (
+                <div key={index} className="condition-for">
+                    {props.children}
+                </div>
+            );
+        }
+    });
+};

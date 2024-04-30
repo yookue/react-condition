@@ -23,7 +23,7 @@ describe('react-condition Switch', () => {
     test('Testing for Case', () => {
         const username: string = 'admin';
         render(
-            <Switch>
+            <Switch validation={false}>
                 <Switch.Case condition={username.includes('admin')}>
                     <span data-testid='admin'>admin</span>
                 </Switch.Case>
@@ -42,7 +42,7 @@ describe('react-condition Switch', () => {
     test('Testing for Default', () => {
         const username: string = 'root';
         render(
-            <Switch>
+            <Switch validation={false}>
                 <Switch.Case condition={username.includes('admin')}>
                     <span data-testid='admin'>admin</span>
                 </Switch.Case>

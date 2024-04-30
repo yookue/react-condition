@@ -20,7 +20,7 @@ import {render, screen} from '@testing-library/react';
 
 
 describe('react-condition For', () => {
-    test('Testing for string', () => {
+    test('Testing for render', () => {
         const params = ['foo', 'bar'];
         render(
             <For
@@ -34,5 +34,16 @@ describe('react-condition For', () => {
         );
         // screen.debug();
         expect(screen.queryByTestId('jest-0')).toBeInTheDocument();
+    });
+
+    test('Testing for children', () => {
+        const params = ['foobar'];
+        render(
+            <For of={params}>
+                <span>Good luck</span>
+            </For>
+        );
+        // screen.debug();
+        expect(screen.queryByText('Good luck')).toBeInTheDocument();
     });
 });

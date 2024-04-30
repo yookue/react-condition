@@ -18,7 +18,7 @@
 import React from 'react';
 
 
-export type SetIteratorProps = {
+export type SetIteratorProps = React.PropsWithChildren<{
     /**
      * The elements to be inspected
      */
@@ -27,8 +27,8 @@ export type SetIteratorProps = {
     /**
      * The render function to be executed
      */
-    render: (item: any, index: number) => React.ReactNode;
-}
+    render?: (item: any, index: number) => React.ReactNode;
+}>;
 
 
 /**
@@ -36,9 +36,16 @@ export type SetIteratorProps = {
  *
  * @author David Hsing
  */
-export const SetIterator: any = (props: SetIteratorProps) => {
-    if (!props?.of || props.of.size === 0) {
-        return undefined;
-    }
-    return Array.from(props.of).map((item, index) => props?.render(item, index));
-}
+export const SetIterator: any = (props: SetIteratorProps): React.ReactNode => {
+    return Array.from(props.of).map((item, index) => {
+        if (props.render) {
+            return props.render(item, index);
+        } else if (!props.render && props.children) {
+            return (
+                <div key={index} className="condition-set-iterator">
+                    {props.children}
+                </div>
+            );
+        }
+    });
+};

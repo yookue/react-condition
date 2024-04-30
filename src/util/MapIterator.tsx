@@ -18,7 +18,7 @@
 import React from 'react';
 
 
-export type MapIteratorProps = {
+export type MapIteratorProps = React.PropsWithChildren<{
     /**
      * The elements to be inspected
      */
@@ -27,8 +27,8 @@ export type MapIteratorProps = {
     /**
      * The render function to be executed
      */
-    render: (value: any, key: any, index: number) => React.ReactNode;
-}
+    render?: (value: any, key: any, index: number) => React.ReactNode;
+}>;
 
 
 /**
@@ -36,9 +36,16 @@ export type MapIteratorProps = {
  *
  * @author David Hsing
  */
-export const MapIterator: any = (props: MapIteratorProps) => {
-    if (!props?.of || props.of.size === 0) {
-        return undefined;
-    }
-    return Array.from(props.of).map((item, index) => props?.render(item[1], item[0], index));
-}
+export const MapIterator: any = (props: MapIteratorProps): React.ReactNode => {
+    return Array.from(props.of).map((item, index) => {
+        if (props.render) {
+            return (item?.length > 1) ? props.render(item[1], item[0], index) : undefined;
+        } else if (!props.render && props.children) {
+            return (
+                <div key={index} className="condition-map-iterator">
+                    {props.children}
+                </div>
+            );
+        }
+    });
+};

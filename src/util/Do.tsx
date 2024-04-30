@@ -18,17 +18,17 @@
 import React from 'react';
 
 
-export type DoProps = {
+export type DoProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
      */
-    condition: () => boolean | number | string | null | undefined;
+    condition: () => boolean | number | string | undefined | null;
 
     /**
      * The render function to be executed
      */
-    render: (index: number) => React.ReactNode;
-}
+    render?: (index: number) => React.ReactNode;
+}>;
 
 
 /**
@@ -36,12 +36,21 @@ export type DoProps = {
  *
  * @author David Hsing
  */
-export const Do: any = (props: DoProps) => {
+export const Do: any = (props: DoProps): React.ReactNode[] => {
     const result: React.ReactNode[] = [];
     let index = 0;
     do {
-        result.push(props?.render(index++));
+        if (props.render) {
+            result.push(props?.render(index));
+        } else if (!props.render && props.children) {
+            result.push(
+                <div key={index} className="condition-do">
+                    {props.children}
+                </div>
+            );
+        }
+        index++;
     }
-    while (props?.condition());
+    while (props.condition());
     return result;
-}
+};

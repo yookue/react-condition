@@ -18,17 +18,17 @@
 import React from 'react';
 
 
-export type WhileProps = {
+export type WhileProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
      */
-    condition: () => boolean | number | string | null | undefined;
+    condition: () => boolean | number | string | undefined | null;
 
     /**
      * The render function to be executed
      */
-    render: (index: number) => React.ReactNode;
-}
+    render?: (index: number) => React.ReactNode;
+}>;
 
 
 /**
@@ -36,11 +36,20 @@ export type WhileProps = {
  *
  * @author David Hsing
  */
-export const While: any = (props: WhileProps) => {
+export const While: any = (props: WhileProps): React.ReactNode[] => {
     const result: React.ReactNode[] = [];
     let index = 0;
-    while (props?.condition()) {
-        result.push(props?.render(index++));
+    while (props.condition()) {
+        if (props.render) {
+            result.push(props?.render(index));
+        } else if (!props.render && props.children) {
+            result.push(
+                <div key={index} className="condition-while">
+                    {props.children}
+                </div>
+            );
+        }
+        index++;
     }
     return result;
-}
+};
