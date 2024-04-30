@@ -51,7 +51,7 @@ export const If: any = (props: IfProps) => {
     if (!props.children) {
         return null;
     }
-    if (props.validation === undefined || props.validation) {
+    if (props.validation !== false) {
         let thenCount = 0, elseCount = 0;
         React.Children.forEach(props.children, (item: any) => {
             const childType = (item as React.ReactElement)?.type;

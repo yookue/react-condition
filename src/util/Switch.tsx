@@ -53,7 +53,7 @@ export const Switch: any = (props?: SwitchProps) => {
     if (!props?.children) {
         return null;
     }
-    if (props?.validation === undefined || props.validation) {
+    if (props?.validation !== false) {
         let caseCount = 0, defaultCount = 0;
         React.Children.forEach(props.children, (item: any) => {
             const childType = (item as React.ReactElement)?.type;
