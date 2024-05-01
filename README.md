@@ -26,6 +26,8 @@
 
 🔁 Supports 'SetIterator' conditions
 
+🔁 Supports 'ObjectIterator' conditions
+
 ## Quickstart
 
 You can install this package in your React project as follows:
@@ -37,7 +39,7 @@ $ npm install @yookue/react-condition --save
 Then, you may import components as follows:
 
 ```jsx | pure
-import {If, For, Switch, Do, While, MapIterator, SetIterator} from '@yookue/react-condition';
+import {If, For, Switch, Do, While, MapIterator, SetIterator, ObjectIterator} from '@yookue/react-condition';
 ```
 
 Enjoy your coding journey with `react-condition`. ✌️
@@ -257,6 +259,30 @@ export default () => {
             render={(item, index) => {
                 return (
                     <span key={index}>Hooray, {item}</span>
+                );
+            }}
+        />
+    );
+}
+```
+
+### ObjectIterator
+
+```jsx | pure
+import React from 'react';
+import {ObjectIterator} from '@yookue/react-condition';
+
+export default () => {
+    const param = {
+        'foo': 'bar',
+        'hello': 'world',
+    };
+    return (
+        <ObjectIterator
+            of={param}
+            render={(value, key, index) => {
+                return (
+                    <span key={index}>Hooray, {key}-{value}</span>
                 );
             }}
         />

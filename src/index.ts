@@ -19,6 +19,7 @@ export {Do, type DoProps} from './util/Do';
 export {For, type ForProps} from './util/For';
 export {If, type IfProps, type IfThenProps, type IfElseProps} from './util/If';
 export {MapIterator, type MapIteratorProps} from './util/MapIterator';
+export {ObjectIterator, type ObjectIteratorProps} from './util/ObjectIterator';
 export {SetIterator, type SetIteratorProps} from './util/SetIterator';
 export {Switch, type SwitchCaseProps, type SwitchDefaultProps} from './util/Switch';
 export {While, type WhileProps} from './util/While';
