@@ -1,8 +1,8 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "title": "ReactCondition",
-    "description": "Render components conditionally for React",
+    "description": "Render components conditionally for react",
     "homepage": "https://github.com/yookue/react-condition",
     "organization": "Yookue Ltd",
     "private": false,
@@ -37,7 +37,7 @@
         "build:watch": "father dev",
         "lint": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
         "test": "jest",
-        "test:coverage": "del-cli ./coverage && jest --coverage"
+        "test:coverage": "del-cli ./coverage && jest --coverage --coverageDirectory ./coverage"
     },
     "dependencies": {
         "@babel/runtime": "^7.24.5"
@@ -50,7 +50,7 @@
         "@types/react-dom": "^17.0.25",
         "@typescript-eslint/eslint-plugin": "^5.62.0",
         "@typescript-eslint/parser": "^5.62.0",
-        "babel-plugin-comments": "^1.0.4",
+        "@yookue/babel-plugin-remove-comment": "^0.1.0",
         "del-cli": "^5.1.0",
         "eslint": "^7.32.0",
         "father": "^4.4.0",
