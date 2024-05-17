@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `If`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type IfProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
@@ -31,6 +38,13 @@ export type IfProps = React.PropsWithChildren<{
 }>;
 
 
+/**
+ * Properties for react `If.Then`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type IfThenProps = IfProps & {
     /**
      * The render function to be executed
@@ -39,6 +53,13 @@ export type IfThenProps = IfProps & {
 };
 
 
+/**
+ * Properties for react `If.Else`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type IfElseProps = IfThenProps;
 
 
@@ -46,6 +67,8 @@ export type IfElseProps = IfThenProps;
  * Control statement for react `If`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const If: any = (props: IfProps) => {
     if (!props.children) {
@@ -73,11 +96,25 @@ export const If: any = (props: IfProps) => {
 };
 
 
+/**
+ * Control statement for react `If.Then`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 If.Then = (props?: IfThenProps) => {
     return props?.render ? props.render() : props?.children;
 };
 
 
+/**
+ * Control statement for react `If.Else`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 If.Else = (props?: IfElseProps) => {
     return props?.render ? props.render() : props?.children;
 };

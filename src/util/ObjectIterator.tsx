@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `ObjectIterator`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type ObjectIteratorProps<T extends object> = React.PropsWithChildren<{
     /**
      * The object to be inspected
@@ -35,6 +42,8 @@ export type ObjectIteratorProps<T extends object> = React.PropsWithChildren<{
  * Control statement for react `ObjectIterator`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const ObjectIterator: any = (props: ObjectIteratorProps<object>) => {
     if (!props.of) {

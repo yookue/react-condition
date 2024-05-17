@@ -8,25 +8,25 @@
 
 ## Features
 
-1️⃣ Supports 'If' conditions
+✅ Supports 'If' conditions
 
-2️⃣ Supports 'If'-'Then' conditions
+✅ Supports 'If'-'Then' conditions
 
-3️⃣ Supports 'If'-'Else' conditions
+✅ Supports 'If'-'Else' conditions
 
-4️⃣ Supports 'If'-'Then'-Else' conditions
+✅ Supports 'If'-'Then'-Else' conditions
 
-🔁 Supports 'For' conditions
+✅ Supports 'For' conditions
 
-🔁 Supports 'Do' conditions
+✅ Supports 'Do' conditions
 
-🔁 Supports 'While' conditions
+✅ Supports 'While' conditions
 
-🔁 Supports 'MapIterator' conditions
+✅ Supports 'MapIterator' conditions
 
-🔁 Supports 'SetIterator' conditions
+✅ Supports 'SetIterator' conditions
 
-🔁 Supports 'ObjectIterator' conditions
+✅ Supports 'ObjectIterator' conditions
 
 ## Quickstart
 
@@ -50,7 +50,7 @@ Enjoy your coding journey with `react-condition`. ✌️
 
 > Both of the `If.Then` and `If.Else` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `Children`.
 
-#### The `If` statement
+#### `If` statement
 
 ```jsx | pure
 import React from 'react';
@@ -66,7 +66,7 @@ export default () => {
 }
 ```
 
-#### The `If`-`Then` statement
+#### `If`-`Then` statement
 
 ```jsx | pure
 import React from 'react';
@@ -84,7 +84,7 @@ export default () => {
 }
 ```
 
-#### The `If`-`Else` statement
+#### `If`-`Else` statement
 
 ```jsx | pure
 import React from 'react';
@@ -103,7 +103,7 @@ export default () => {
 }
 ```
 
-#### The `If`-`Then`-`Else` statement
+#### `If`-`Then`-`Else` statement
 
 ```jsx | pure
 import React from 'react';

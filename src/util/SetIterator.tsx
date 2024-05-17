@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `SetIterator`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type SetIteratorProps = React.PropsWithChildren<{
     /**
      * The elements to be inspected
@@ -35,6 +42,8 @@ export type SetIteratorProps = React.PropsWithChildren<{
  * Control statement for react `SetIterator`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const SetIterator: any = (props: SetIteratorProps) => {
     return Array.from(props.of).map((item, index) => {

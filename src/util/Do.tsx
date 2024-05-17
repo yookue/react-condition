@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `Do`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type DoProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
@@ -35,6 +42,8 @@ export type DoProps = React.PropsWithChildren<{
  * Control statement for react `Do`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const Do: any = (props: DoProps) => {
     const result = [];

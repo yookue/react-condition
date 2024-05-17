@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `For`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type ForProps = React.PropsWithChildren<{
     /**
      * The elements to be inspected
@@ -35,6 +42,8 @@ export type ForProps = React.PropsWithChildren<{
  * Control statement for react `For`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const For: any = (props: ForProps) => {
     return props.of.map((item, index) => {

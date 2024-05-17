@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `MapIterator`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type MapIteratorProps = React.PropsWithChildren<{
     /**
      * The elements to be inspected
@@ -35,6 +42,8 @@ export type MapIteratorProps = React.PropsWithChildren<{
  * Control statement for react `MapIterator`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const MapIterator: any = (props: MapIteratorProps) => {
     return Array.from(props.of).map((item, index) => {

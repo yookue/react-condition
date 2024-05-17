@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `Switch`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type SwitchProps = React.PropsWithChildren<{
     /**
      * Whether to validate the children nodes
@@ -26,6 +33,13 @@ export type SwitchProps = React.PropsWithChildren<{
 }>;
 
 
+/**
+ * Properties for react `Switch.Case`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type SwitchCaseProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
@@ -39,6 +53,13 @@ export type SwitchCaseProps = React.PropsWithChildren<{
 }>;
 
 
+/**
+ * Properties for react `Switch.Default`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type SwitchDefaultProps = React.PropsWithChildren<{
     render?: () => React.ReactNode;
 }>;
@@ -48,6 +69,8 @@ export type SwitchDefaultProps = React.PropsWithChildren<{
  * Control statement for react `Switch`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const Switch: any = (props?: SwitchProps) => {
     if (!props?.children) {
@@ -85,11 +108,25 @@ export const Switch: any = (props?: SwitchProps) => {
 };
 
 
+/**
+ * Control statement for react `Switch.Case`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 Switch.Case = (props: SwitchCaseProps) => {
     return !props.condition ? null : (props?.render ? props.render() : props.children);
 };
 
 
+/**
+ * Control statement for react `Switch.Default`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 Switch.Default = (props?: SwitchDefaultProps) => {
     return props?.render ? props.render() : props?.children;
 };

@@ -18,6 +18,13 @@
 import React from 'react';
 
 
+/**
+ * Properties for react `While`
+ *
+ * @author David Hsing
+ *
+ * @ignore
+ */
 export type WhileProps = React.PropsWithChildren<{
     /**
      * The condition to be checked
@@ -35,6 +42,8 @@ export type WhileProps = React.PropsWithChildren<{
  * Control statement for react `While`
  *
  * @author David Hsing
+ *
+ * @ignore
  */
 export const While: any = (props: WhileProps) => {
     const result = [];
