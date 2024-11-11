@@ -39,7 +39,8 @@ $ npm install @yookue/react-condition --save
 Then, you may import components as follows:
 
 ```jsx | pure
-import {If, For, Switch, Do, While, MapIterator, SetIterator, ObjectIterator} from '@yookue/react-condition';
+import {If, For, Switch, Do, While} from '@yookue/react-condition';
+import {MapIterator, SetIterator, ObjectIterator} from '@yookue/react-condition';
 ```
 
 Enjoy your coding journey with `react-condition`. ✌️
