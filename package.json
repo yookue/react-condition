@@ -1,6 +1,6 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.18",
+    "version": "0.1.19",
     "title": "ReactCondition",
     "description": "Render components conditionally for react",
     "homepage": "https://yookue.github.io/react-condition",
@@ -42,7 +42,7 @@
         "test:coverage": "del-cli ./coverage && jest --coverage --coverageDirectory ./coverage"
     },
     "dependencies": {
-        "@babel/runtime": "^7.24.5"
+        "@babel/runtime": "^7.26.0"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^5.17.0",
@@ -50,23 +50,23 @@
         "@types/jest": "^29.5.12",
         "@types/react": "^17.0.80",
         "@types/react-dom": "^17.0.25",
-        "@typescript-eslint/eslint-plugin": "^6.21.0",
-        "@yookue/babel-plugin-remove-comment": "^0.1.3",
-        "@yookue/typedoc-plugin-raw-content": "^0.1.4",
-        "@yookue/typedoc-theme-dumi": "^0.1.2",
-        "del-cli": "^5.1.0",
-        "father": "^4.4.0",
-        "gh-pages": "^6.1.1",
+        "@typescript-eslint/eslint-plugin": "^7.18.0",
+        "@yookue/babel-plugin-remove-comment": "^0.1.5",
+        "@yookue/typedoc-plugin-raw-content": "^0.1.7",
+        "@yookue/typedoc-theme-dumi": "^0.1.4",
+        "del-cli": "^6.0.0",
+        "father": "^4.5.1",
+        "gh-pages": "^6.2.0",
         "jest-environment-jsdom": "^29.7.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "ts-jest": "^29.1.2",
-        "typedoc": "^0.25.13",
+        "ts-jest": "^29.2.5",
+        "typedoc": "~0.25.13",
         "typescript": "^4.9.5"
     },
     "peerDependencies": {
-        "react": ">=16.9.0",
-        "react-dom": ">=16.9.0"
+        "react": ">= 17",
+        "react-dom": ">= 17"
     },
     "repository": {
         "type": "git",
