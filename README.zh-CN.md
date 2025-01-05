@@ -4,54 +4,54 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.txt)
 [![NPM downloads](http://img.shields.io/npm/dm/@yookue/react-condition.svg?style=flat)](https://npmjs.org/package/@yookue/react-condition)
 
-🏅 Render components conditionally for React 👍
+🏅 React 条件性渲染组件 👍
 
-## Features
+## 特性
 
-✅ Supports 'If' conditions
+✅ 支持 'If' 条件渲染
 
-✅ Supports 'If'-'Then' conditions
+✅ 支持 'If'-'Then' 条件渲染
 
-✅ Supports 'If'-'Else' conditions
+✅ 支持 'If'-'Else' 条件渲染
 
-✅ Supports 'If'-'Then'-Else' conditions
+✅ 支持 'If'-'Then'-Else' 条件渲染
 
-✅ Supports 'For' conditions
+✅ 支持 'For' 条件渲染
 
-✅ Supports 'Do' conditions
+✅ 支持 'Do' 条件渲染
 
-✅ Supports 'While' conditions
+✅ 支持 'While' 条件渲染
 
-✅ Supports 'MapIterator' conditions
+✅ 支持 'MapIterator' 条件渲染
 
-✅ Supports 'SetIterator' conditions
+✅ 支持 'SetIterator' 条件渲染
 
-✅ Supports 'ObjectIterator' conditions
+✅ 支持 'ObjectIterator' 条件渲染
 
-## Quickstart
+## 快速开始
 
-You can install this package in your React project as follows:
+您可以在您的 React 项目中使用以下命令来安装本组件库：
 
 ```bash
 $ npm install @yookue/react-condition --save
 ```
 
-Then, you may import components as follows:
+然后，您可以使用以下命令来导入组件：
 
 ```jsx | pure
 import {If, For, Switch, Do, While} from '@yookue/react-condition';
 import {MapIterator, SetIterator, ObjectIterator} from '@yookue/react-condition';
 ```
 
-Enjoy your coding journey with `react-condition`. ✌️
+享受您和 `react-condition` 的编程之旅吧 ✌️
 
-## Example
+## 示例
 
 ### If
 
-> Both of the `If.Then` and `If.Else` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `children`.
+> `If.Then` 和 `If.Else` 都有一个 `render` 属性 `() => React.ReactNode`，这样您也可以通过它来返回自定义的渲染内容, 比 React 的 `children` 属性权重要高。
 
-#### `If` statement
+#### `If` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -67,7 +67,7 @@ export default () => {
 }
 ```
 
-#### `If`-`Then` statement
+#### `If`-`Then` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -85,7 +85,7 @@ export default () => {
 }
 ```
 
-#### `If`-`Else` statement
+#### `If`-`Else` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -104,7 +104,7 @@ export default () => {
 }
 ```
 
-#### `If`-`Then`-`Else` statement
+#### `If`-`Then`-`Else` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -125,7 +125,7 @@ export default () => {
 }
 ```
 
-### `For` statement
+### `For` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -145,9 +145,9 @@ export default () => {
 }
 ```
 
-### `Switch` statement
+### `Switch` 语句
 
-> Both of the `Switch.Case` and `Switch.Default` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `children`.
+> `Switch.Case` 和 `Switch.Default` 都有一个 `render` 属性 `() => React.ReactNode`，这样您也可以通过它来返回自定义的渲染内容, 比 React 的 `children` 属性权重要高。
 
 ```jsx | pure
 import React from 'react';
@@ -172,7 +172,7 @@ export default () => {
 }
 ```
 
-### `Do` statement
+### `Do` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -196,7 +196,7 @@ export default () => {
 }
 ```
 
-### `While` statement
+### `While` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -219,7 +219,7 @@ export default () => {
 }
 ```
 
-### `MapIterator` statement
+### `MapIterator` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -243,7 +243,7 @@ export default () => {
 }
 ```
 
-### `SetIterator` statement
+### `SetIterator` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -267,7 +267,7 @@ export default () => {
 }
 ```
 
-### `ObjectIterator` statement
+### `ObjectIterator` 语句
 
 ```jsx | pure
 import React from 'react';
@@ -291,14 +291,14 @@ export default () => {
 }
 ```
 
-## License
+## 授权
 
-This project is under the [MIT License](https://mit-license.org/).
+本组件库授权基于 [MIT License](https://mit-license.org/) 协议
 
-## Copyright
+## 版权
 
-Beijing Yookue Network Technology Ltd.
+北京攸科网络科技有限公司
 
-## Website
+## 网站
 
 - Yookue: [https://yookue.com](https://yookue.com)

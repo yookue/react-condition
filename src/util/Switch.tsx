@@ -74,7 +74,7 @@ export type SwitchDefaultProps = React.PropsWithChildren<{
  */
 export const Switch: any = (props?: SwitchProps) => {
     if (!props?.children) {
-        return null;
+        return undefined;
     }
     if (props?.validation !== false) {
         let caseCount = 0, defaultCount = 0;

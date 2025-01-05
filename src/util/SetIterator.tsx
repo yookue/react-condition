@@ -56,6 +56,6 @@ export const SetIterator: any = (props: SetIteratorProps) => {
                 </div>
             );
         }
-        return null;
+        return undefined;
     });
 };

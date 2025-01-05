@@ -56,6 +56,6 @@ export const MapIterator: any = (props: MapIteratorProps) => {
                 </div>
             );
         }
-        return null;
+        return undefined;
     });
 };

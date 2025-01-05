@@ -72,7 +72,7 @@ export type IfElseProps = IfThenProps;
  */
 export const If: any = (props: IfProps) => {
     if (!props.children) {
-        return null;
+        return undefined;
     }
     if (props.validation !== false) {
         let thenCount = 0, elseCount = 0;
