@@ -94,7 +94,7 @@ export const Switch: any = (props?: SwitchProps) => {
             throw SyntaxError(`Statement of 'Switch.Default' for [Switch] must be a single one at most!`);
         }
     }
-    let caseValue = null, defaultValue = null;
+    let caseValue = undefined, defaultValue = undefined;
     React.Children.forEach(props.children, (item: any) => {
         const childType = (item as React.ReactElement)?.type;
         if (childType === Switch.Case && item.props?.condition) {
@@ -116,7 +116,7 @@ export const Switch: any = (props?: SwitchProps) => {
  * @ignore
  */
 Switch.Case = (props: SwitchCaseProps) => {
-    return !props.condition ? null : (props?.render ? props.render() : props.children);
+    return !props.condition ? undefined : (props?.render ? props.render() : props.children);
 };
 
 
