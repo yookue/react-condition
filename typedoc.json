@@ -29,6 +29,9 @@
     "rawFooterEnds": [
         "<div style='text-align: center'>Copyright &copy; 2025 Yookue Ltd. All rights reserved</div>"
     ],
+    "logoImage": "https://yookue.github.io/assets/ico/logo-icon.svg",
+    "logoWidth": 32,
+    "logoHeight": 32,
     "logoTitle": "@yookue/react-condition",
     "navigationLinkTargets": {
         "GitHub": "_blank",

@@ -1,6 +1,6 @@
 {
     "name": "@yookue/react-condition",
-    "version": "0.1.21",
+    "version": "0.1.22",
     "title": "ReactCondition",
     "description": "Render components conditionally for react",
     "homepage": "https://yookue.github.io/react-condition",
@@ -42,32 +42,32 @@
         "test:coverage": "del-cli ./coverage && jest --coverage --coverageDirectory ./coverage"
     },
     "dependencies": {
-        "@babel/runtime": "^7.26.0"
+        "@babel/runtime": "^7.26.9"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^12.1.5",
-        "@types/jest": "^29.5.12",
-        "@types/react": "^17.0.80",
-        "@types/react-dom": "^17.0.25",
+        "@types/jest": "^29.5.14",
+        "@types/react": "^17.0.83",
+        "@types/react-dom": "^17.0.26",
         "@typescript-eslint/eslint-plugin": "^7.18.0",
-        "@yookue/babel-plugin-remove-comment": "^0.1.5",
-        "@yookue/typedoc-plugin-raw-content": "~0.1.7",
-        "@yookue/typedoc-theme-dumi": "~0.1.5",
+        "@yookue/babel-plugin-remove-comment": "^0.1.6",
+        "@yookue/typedoc-plugin-raw-content": "~0.1.8",
+        "@yookue/typedoc-theme-dumi": "~0.1.6",
         "del-cli": "^6.0.0",
-        "father": "^4.5.1",
+        "father": "^4.5.3",
         "gh-pages": "^6.3.0",
         "jest-environment-jsdom": "^29.7.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "ts-jest": "^29.2.5",
+        "ts-jest": "^29.2.6",
         "typedoc": "~0.25.13",
         "typescript": "^4.9.5"
     },
     "peerDependencies": {
-        "react": ">= 17",
-        "react-dom": ">= 17",
-        "typescript": ">= 4"
+        "react": ">=17",
+        "react-dom": ">=17",
+        "typescript": ">=4"
     },
     "repository": {
         "type": "git",
@@ -90,7 +90,7 @@
         },
         {
             "type": "individual",
-            "url": "https://yookue.com/public/donate"
+            "url": "https://yookue.com/donation"
         }
     ],
     "author": {
