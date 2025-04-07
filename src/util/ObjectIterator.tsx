@@ -47,7 +47,7 @@ export type ObjectIteratorProps<T extends object> = React.PropsWithChildren<{
  */
 export const ObjectIterator: any = (props: ObjectIteratorProps<object>) => {
     if (!props.of) {
-        return null;
+        return undefined;
     }
     return Object.keys(props.of).map((item, index) => {
         if (props.render) {
@@ -59,6 +59,6 @@ export const ObjectIterator: any = (props: ObjectIteratorProps<object>) => {
                 </div>
             );
         }
-        return null;
+        return undefined;
     });
 };

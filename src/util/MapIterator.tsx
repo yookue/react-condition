@@ -48,7 +48,7 @@ export type MapIteratorProps = React.PropsWithChildren<{
 export const MapIterator: any = (props: MapIteratorProps) => {
     return Array.from(props.of).map((item, index) => {
         if (props.render) {
-            return (item?.length > 1) ? props.render(item[1], item[0], index) : null;
+            return (item?.length > 1) ? props.render(item[1], item[0], index) : undefined;
         } else if (!props.render && props.children) {
             return (
                 <div key={index} className="condition-map-iterator">
@@ -56,6 +56,6 @@ export const MapIterator: any = (props: MapIteratorProps) => {
                 </div>
             );
         }
-        return null;
+        return undefined;
     });
 };

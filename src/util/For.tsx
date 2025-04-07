@@ -56,6 +56,6 @@ export const For: any = (props: ForProps) => {
                 </div>
             );
         }
-        return null;
+        return undefined;
     });
 };

@@ -72,7 +72,7 @@ export type IfElseProps = IfThenProps;
  */
 export const If: any = (props: IfProps) => {
     if (!props.children) {
-        return null;
+        return undefined;
     }
     if (props.validation !== false) {
         let thenCount = 0, elseCount = 0;
@@ -91,7 +91,7 @@ export const If: any = (props: IfProps) => {
     }
     return React.Children.map(props.children, (item: any) => {
         const isElse = (item as React.ReactElement)?.type === If.Else;
-        return ((props.condition && !isElse) || (!props.condition && isElse)) ? item : null;
+        return ((props.condition && !isElse) || (!props.condition && isElse)) ? item : undefined;
     });
 };
 
