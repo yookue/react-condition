@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2023 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License.
  *
@@ -15,7 +15,7 @@
  */
 
 
-import {For} from '@yookue/react-condition';
+import {For} from '@unikue/react-condition';
 import {render, screen} from '@testing-library/react';
 
 

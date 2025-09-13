@@ -17,10 +17,10 @@
             "@/*": [
                 "./src/*"
             ],
-            "@yookue/react-condition": [
+            "@unikue/react-condition": [
                 "./src"
             ],
-            "@yookue/react-condition/*": [
+            "@unikue/react-condition/*": [
                 "./src/*",
                 "*"
             ]

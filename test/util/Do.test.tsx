@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2023 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License.
  *
@@ -15,7 +15,8 @@
  */
 
 
-import {Do} from '@yookue/react-condition';
+import '@testing-library/jest-dom';
+import {Do} from '@unikue/react-condition';
 import {render, screen} from '@testing-library/react';
 
 

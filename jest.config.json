@@ -6,6 +6,6 @@
     "moduleNameMapper": {
         "^@$": "<rootDir>/src",
         "^@/(.*)$": "<rootDir>/src/$1",
-        "^@yookue/react-condition$": "<rootDir>/src"
+        "^@unikue/react-condition$": "<rootDir>/src"
     }
 }
