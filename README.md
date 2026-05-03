@@ -38,7 +38,7 @@ $ npm install @unikue/react-condition --save
 
 Then, you may import components as follows:
 
-```jsx | pure
+```tsx | pure
 import {If, For, Switch, Do, While} from '@unikue/react-condition';
 import {MapIterator, SetIterator, ObjectIterator} from '@unikue/react-condition';
 ```
@@ -53,12 +53,12 @@ Enjoy your coding journey with `react-condition`. ✌️
 
 #### `If` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {If} from '@unikue/react-condition';
 
 export default () => {
-    const param = true;
+    const param: boolean = true;
     return (
         <If condition={param}>
             <span>Hello World</span>
@@ -69,12 +69,12 @@ export default () => {
 
 #### `If`-`Then` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {If} from '@unikue/react-condition';
 
 export default () => {
-    const param = 1;
+    const param: number = 1;
     return (
         <If condition={param}>
             <If.Then>
@@ -87,12 +87,12 @@ export default () => {
 
 #### `If`-`Else` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {If} from '@unikue/react-condition';
 
 export default () => {
-    const param = false;
+    const param: boolean = false;
     return (
         <If condition={param}>
             <span>Hello World</span>
@@ -106,12 +106,12 @@ export default () => {
 
 #### `If`-`Then`-`Else` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {If} from '@unikue/react-condition';
 
 export default () => {
-    const param = false;
+    const param: boolean = false;
     return (
         <If condition={param}>
             <If.Then>
@@ -127,7 +127,7 @@ export default () => {
 
 ### `For` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {For} from '@unikue/react-condition';
 
@@ -149,12 +149,12 @@ export default () => {
 
 > Both of the `Switch.Case` and `Switch.Default` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `children`.
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {Switch} from '@unikue/react-condition';
 
 export default () => {
-    const username = 'admin';
+    const username: string = 'admin';
 
     return (
         <Switch>
@@ -174,12 +174,12 @@ export default () => {
 
 ### `Do` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {Do} from '@unikue/react-condition';
 
 export default () => {
-    let param = 0;
+    let param: number = 0;
     return (
         <Do
             condition={() => {
@@ -198,12 +198,12 @@ export default () => {
 
 ### `While` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {While} from '@unikue/react-condition';
 
 export default () => {
-    let param = 0;
+    let param: number = 0;
     return (
         <While
             condition={() => {
@@ -221,7 +221,7 @@ export default () => {
 
 ### `MapIterator` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {MapIterator} from '@unikue/react-condition';
 
@@ -245,7 +245,7 @@ export default () => {
 
 ### `SetIterator` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {SetIterator} from '@unikue/react-condition';
 
@@ -269,12 +269,12 @@ export default () => {
 
 ### `ObjectIterator` statement
 
-```jsx | pure
+```tsx | pure
 import React from 'react';
 import {ObjectIterator} from '@unikue/react-condition';
 
 export default () => {
-    const param = {
+    const param: object = {
         'foo': 'bar',
         'hello': 'world',
     };

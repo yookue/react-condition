@@ -15,7 +15,8 @@
         "js",
         "json",
         "jsx",
-        "ts"
+        "ts",
+        "tsx"
     ],
     "includeVersion": false,
     "navigationLinks": {

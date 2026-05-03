@@ -22,7 +22,7 @@ import {render, screen} from '@testing-library/react';
 
 describe('react-condition If', () => {
     test('Testing object', () => {
-        const param: Object = {foo: 'bar'};
+        const param: object = {foo: 'bar'};
         render(
             <If condition={param} validation={false}>
                 <If.Then>
@@ -71,7 +71,7 @@ describe('react-condition If', () => {
     });
 
     test('Testing with else', () => {
-        const param1: number = 0, param2: number = 1;
+        const param1: number = 0;
         render(
             <If condition={param1}>
                 <span data-testid='oops'>Oops</span>
@@ -85,7 +85,7 @@ describe('react-condition If', () => {
     });
 
     test('Testing just else', () => {
-        const param1: number = 0, param2: number = 1;
+        const param1: number = 0;
         render(
             <If condition={param1}>
                 <If.Else>

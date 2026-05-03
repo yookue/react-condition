@@ -1,6 +1,6 @@
 {
     "name": "@unikue/react-condition",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "title": "ReactCondition",
     "description": "Render components conditionally for react",
     "homepage": "https://unikueltd.github.io/react-condition",
@@ -42,34 +42,36 @@
         "test:coverage": "del-cli ./coverage && jest --coverage --coverageDirectory ./coverage"
     },
     "dependencies": {
-        "@babel/runtime": "^7.28.4"
+        "@babel/runtime": "^7.29.2"
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3.3.1",
-        "@eslint/js": "^9.35.0",
-        "@testing-library/jest-dom": "^6.8.0",
-        "@testing-library/react": "^16.3.0",
+        "@eslint/js": "^10.0.1",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
         "@types/jest": "^30.0.0",
-        "@types/react": "^18.2.0",
-        "@types/react-dom": "^18.2.0",
-        "@typescript-eslint/eslint-plugin": "^8.43.0",
-        "@unikue/babel-plugin-remove-comment": "^1.0.0",
-        "@unikue/typedoc-plugin-raw-content": "~1.0.0",
-        "@unikue/typedoc-theme-dumi": "~1.0.0",
-        "del-cli": "^6.0.0",
-        "father": "^4.6.4",
+        "@types/react": "^19.2.14",
+        "@types/react-dom": "^19.2.3",
+        "@typescript-eslint/eslint-plugin": "^8.59.1",
+        "@unikue/babel-plugin-remove-comment": "^1.2.0",
+        "@unikue/typedoc-plugin-raw-content": "^1.1.0",
+        "@unikue/typedoc-theme-dumi": "^1.1.0",
+        "del-cli": "^7.0.0",
+        "eslint": "^10.3.0",
+        "eslint-plugin-jest": "^29.15.2",
+        "father": "^4.6.19",
         "gh-pages": "^6.3.0",
-        "globals": "^16.4.0",
-        "jest-environment-jsdom": "^29.7.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "ts-jest": "^29.4.1",
-        "typedoc": "~0.28.12",
-        "typescript": "^5.9.2"
+        "globals": "^17.6.0",
+        "jest-environment-jsdom": "^30.3.0",
+        "react": "^19.2.5",
+        "react-dom": "^19.2.5",
+        "ts-jest": "^29.4.9",
+        "typedoc": "~0.28.19",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.59.1"
     },
     "peerDependencies": {
-        "react": ">=17.0.0",
-        "react-dom": ">=17.0.0",
+        "react": ">=18.0.0",
+        "react-dom": ">=18.0.0",
         "typescript": ">=4"
     },
     "repository": {
@@ -81,7 +83,7 @@
     },
     "publishConfig": {
         "access": "public",
-        "registry": "https://registry.npmjs.org/"
+        "registry": "https://registry.npmjs.org"
     },
     "collective": {
         "url": "https://opencollective.com/unikue-awesome"
