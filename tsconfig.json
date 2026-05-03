@@ -26,7 +26,6 @@
                 "./src"
             ],
             "@unikue/react-condition/*": [
-                "./*",
                 "./src/*"
             ]
         },
