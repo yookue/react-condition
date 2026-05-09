@@ -51,7 +51,7 @@ Enjoy your coding journey with `react-condition`. ✌️
 
 > Both of the `If.Then` and `If.Else` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `children`.
 
-#### `If` statement
+#### If
 
 ```tsx | pure
 import React from 'react';
@@ -67,7 +67,7 @@ export default () => {
 }
 ```
 
-#### `If`-`Then` statement
+#### If-Then
 
 ```tsx | pure
 import React from 'react';
@@ -85,7 +85,7 @@ export default () => {
 }
 ```
 
-#### `If`-`Else` statement
+#### If-Else
 
 ```tsx | pure
 import React from 'react';
@@ -104,7 +104,7 @@ export default () => {
 }
 ```
 
-#### `If`-`Then`-`Else` statement
+#### If-Then-Else
 
 ```tsx | pure
 import React from 'react';
@@ -125,7 +125,7 @@ export default () => {
 }
 ```
 
-### `For` statement
+### For
 
 ```tsx | pure
 import React from 'react';
@@ -145,7 +145,7 @@ export default () => {
 }
 ```
 
-### `Switch` statement
+### Switch
 
 > Both of the `Switch.Case` and `Switch.Default` have a `render` property (() => React.ReactNode), thus you can customize the rendering contents instead of the React `children`.
 
@@ -172,7 +172,7 @@ export default () => {
 }
 ```
 
-### `Do` statement
+### Do
 
 ```tsx | pure
 import React from 'react';
@@ -196,7 +196,7 @@ export default () => {
 }
 ```
 
-### `While` statement
+### While
 
 ```tsx | pure
 import React from 'react';
@@ -219,7 +219,7 @@ export default () => {
 }
 ```
 
-### `MapIterator` statement
+### MapIterator
 
 ```tsx | pure
 import React from 'react';
@@ -243,7 +243,7 @@ export default () => {
 }
 ```
 
-### `SetIterator` statement
+### SetIterator
 
 ```tsx | pure
 import React from 'react';
@@ -267,7 +267,7 @@ export default () => {
 }
 ```
 
-### `ObjectIterator` statement
+### ObjectIterator
 
 ```tsx | pure
 import React from 'react';
